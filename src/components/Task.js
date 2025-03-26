@@ -16,6 +16,7 @@ export default function Task({
           name="checked"
           id={`archiveTask-${id}`}
           checked={state === "TASK_ARCHIVED"}
+          role="article"
         />
         <span className="checkbox-custom" onClick={() => onArchiveTask(id)} />
       </label>
@@ -27,6 +28,8 @@ export default function Task({
           readOnly={true}
           name="title"
           placeholder="Input title"
+          role="alert"
+          style={{ color: "#f0f2f5" }}
         />
       </label>
 
@@ -37,6 +40,7 @@ export default function Task({
           id={`pinTask-${id}`}
           key={`pinTask-${id}`}
           data-testid={`pinTask-${id}`}
+          style={{ background: "transparent" }}
         >
           <span className={`icon-star`} />
         </button>
